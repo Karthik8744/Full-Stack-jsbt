@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task-2</title>
+</head>
+<body>
+    <label for="aString">Enter String : </label>
+    <input type="text" id="aString" onkeyup="aplaOrder()">
+    <br><br><br>
+    <div id="output"></div>
+    <br><br><br>
+    <script>
+        function sortAlpha(word) {
+            return word.split("")
+                .sort()
+                .join("");
+        }
+        function aplaOrder(){
+            var str = document.getElementById("aString").value;
+            document.getElementById("output").innerText = "String in alphabet order : "+ sortAlpha(str);
+        }
+    </script>
+</body>
+</html>

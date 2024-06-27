@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js task-1</title>
+</head>
+<body>
+    <label for="num"> enter number</label>
+    <input type="number" name="" id="num" onkeyup="reversenumber()">
+    <br><br><br>
+    <div id="resultNum"></div>
+    <br><br><br>
+    <script>
+        function reversenumber() {
+                let number = document.getElementById("num").value;
+                let result = 0;
+                while (number > 0) {
+                    digit = number % 10;
+                    result = result * 10 + digit;
+                    number = Math.floor(number / 10);
+                }
+                document.getElementById("resultNum").innerText = "Reversed number: " + result; 
+            }
+    </script>
+</body>
+</html>

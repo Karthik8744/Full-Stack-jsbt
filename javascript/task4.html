@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task-4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+        function showtime(){
+            let date=document.getElementById("showdate");
+            date= new Date();
+            document.getElementById("time").innerHTML=date;
+        }
+        function showdate(){
+            let date=document.getElementById("showtime");
+            date= new Date();
+            const months = [
+                    "January", "February", 
+                    "March", "April", "May", 
+                    "June", "July", "August",
+                    "September", "October", 
+                    "November", "December"
+            ];
+            document.getElementById("date").innerHTML=date.getDate()+"/"+months[date.getMonth()]+"/"+date.getFullYear();
+        }
+    </script>
+</head>
+<body>
+    <br/>
+    <button onclick="showdate()" id="showdate" class="rounded">Show date</button>
+    <p><span id="date"></span> </p>
+    <br/>
+    <button onclick="showtime()" id="showtime" class="rounded">Show time</button>
+    <p><span id="time"></span> </p>
+</body>
+</html>
